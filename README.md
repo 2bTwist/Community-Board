@@ -37,7 +37,7 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+The main challenge encountered while building the app was passing the card props details to ensure each card displayed the correct information dynamically.
 
 ## License
 
