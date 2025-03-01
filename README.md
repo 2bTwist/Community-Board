@@ -26,7 +26,11 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='https://imgur.com/a/W1ywotZ.gif' title='Video Walkthrough' width='500px' alt='Video Walkthrough' />
+<div>
+    <a href="https://www.loom.com/share/672eca6c0215459e8d85086469c32202">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/672eca6c0215459e8d85086469c32202-61deed59250951ca-full-play.gif">
+    </a>
+</div>
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  [ScreenToGif](https://www.screentogif.com/) for Windows
