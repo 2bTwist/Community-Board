@@ -1,22 +1,22 @@
-# Web Development Project 1 - *Name of App Here*
+# Web Development Project 1 - *Board Game Community*
 
-Submitted by: **Your Name Here**
+Submitted by: **Edmond Batchankwe Ndanji**
 
-This web app: **insert description**
+This web app: **A platform for card game enthusiasts to discover and play card games online. The app displays a collection of card games in a responsive card format, with links to play each game online.**
 
-Time spent: **X** hours spent in total
+Time spent: **15** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [ ] **There is a unique theme for events or resources relevant to a specific community**
-- [ ] **At least 10 unique resources or events are displayed in a responsive card format**
+- [X] **There is a unique theme for events or resources relevant to a specific community**
+- [X] **At least 10 unique resources or events are displayed in a responsive card format**
 
 The following **optional** features are implemented:
 
-- [ ] Buttons or links to a related resources are on each card component
-- [ ] The site is responsive for both desktop and mobile formats
+- [X] Buttons or links to a related resources are on each card component
+- [X] The site is responsive for both desktop and mobile formats
 
 The following **additional** features are implemented:
 
@@ -41,7 +41,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2025] [Edmond Batchankwe Ndanji]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
