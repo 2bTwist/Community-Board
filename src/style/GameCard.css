@@ -1,38 +1,124 @@
 .game-card {
-    width: 300px;  /* Set a fixed width */
-    height: 400px; /* Set a fixed height */
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 16px;
+    width: 320px; /* Slightly wider for a playing card look */
+    height: 450px; /* More space for text */
+    border-radius: 16px; /* Rounded corners for the card shape */
+    padding: 20px;
     text-align: center;
-    background: #0e0d0d;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s;
-}
+    background: linear-gradient(145deg, #3d2b3d, #2b1d2b); /* Dark purple gradient */
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.4), /* Outer shadow */
+      inset 0 0 12px rgba(255, 255, 255, 0.1); /* Inner glow for depth */
+    border: 4px solid #5a3a5a; /* Thick border for a tactile feel */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden; /* Ensures child elements don't overflow */
+    position: relative; /* For pseudo-elements */
+  }
+  
+  .game-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none; /* Ensures it doesn't block interactions */
+  }
   
   .game-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-10px) scale(1.02); /* Slight lift and scale on hover */
+    box-shadow: 
+      0 12px 40px rgba(0, 0, 0, 0.6), 
+      inset 0 0 16px rgba(255, 255, 255, 0.2); /* Enhanced shadow and glow */
+  }
+  
+  .game-card:hover::before {
+    opacity: 1; /* Reveals the radial gradient effect */
   }
   
   .game-image {
     width: 100%;
-    height: 200px;
+    height: 180px;
     object-fit: cover;
-    border-radius: 4px;
+    border-radius: 12px;
+    border: 2px solid #5a3a5a; /* Matching border color */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .game-image:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5); /* Glow effect */
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    color: #f4e9d2; /* Cream color for text */
+    margin: 10px 0;
+    font-family: "Poppins", sans-serif;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .game-card:hover h2 {
+    transform: translateY(-5px); /* Slight lift on hover */
+  }
+  
+  p {
+    font-size: 1rem;
+    color: rgba(244, 233, 210, 0.8); /* Cream color with transparency */
+    margin-bottom: 10px;
+    font-family: "Poppins", sans-serif;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .game-card:hover p {
+    transform: translateY(-5px); /* Slight lift on hover */
   }
   
   .play-button {
     display: inline-block;
-    margin-top: 10px;
-    padding: 8px 16px;
-    background: red;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
+    padding: 12px 20px;
+    background: linear-gradient(45deg, #8b5a2b, #a87b4e); /* Brown gradient */
+    color: #f4e9d2; /* Cream color for text */
+    font-size: 1rem;
     font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 
+      0 4px 10px rgba(0, 0, 0, 0.4), 
+      inset 0 0 8px rgba(255, 255, 255, 0.2); /* Inner glow */
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .play-button::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
   }
   
   .play-button:hover {
-    background: darkred;
+    background: linear-gradient(45deg, #a87b4e, #8b5a2b); /* Reversed gradient */
+    box-shadow: 
+      0 6px 15px rgba(0, 0, 0, 0.6), 
+      inset 0 0 12px rgba(255, 255, 255, 0.3); /* Enhanced glow */
+    transform: scale(1.05);
   }
   
+  .play-button:hover::before {
+    opacity: 1; /* Reveals the radial gradient effect */
+  }
