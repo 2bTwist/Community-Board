@@ -2,17 +2,14 @@
     width: 320px; /* Slightly wider for a playing card look */
     height: 450px; /* More space for text */
     border-radius: 16px; /* Rounded corners for the card shape */
-    padding: 20px;
-    text-align: center;
     background: linear-gradient(145deg, #3d2b3d, #2b1d2b); /* Dark purple gradient */
     box-shadow: 
       0 8px 32px rgba(0, 0, 0, 0.4), /* Outer shadow */
       inset 0 0 12px rgba(255, 255, 255, 0.1); /* Inner glow for depth */
-    border: 4px solid #5a3a5a; /* Thick border for a tactile feel */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start; /* Align content to the top */
     align-items: center;
     overflow: hidden; /* Ensures child elements don't overflow */
     position: relative; /* For pseudo-elements */
@@ -43,16 +40,31 @@
   }
   
   .game-image {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 12px;
-    border: 2px solid #5a3a5a; /* Matching border color */
+    width: 100%; /* Full width of the card */
+    height: 200px; /* Fixed height for the image */
+    object-fit: cover; /* Ensures the image covers the area */
+    border-top-left-radius: 12px; /* Match card's top corners */
+    border-top-right-radius: 12px;
+    border: none; /* Remove border */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   }
   
-  .game-image:hover {
+  /* Image zoom effect when card is hovered */
+  .game-card:hover .game-image {
+    transform: scale(1.6); /* Zoom effect */
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5); /* Glow effect */
+  }
+  
+  .card-content {
+    padding: 20px; /* Add padding to the content area */
+    text-align: center;
+    flex-grow: 1; /* Ensures content takes up remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
   
   h2 {
