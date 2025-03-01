@@ -15,6 +15,14 @@
     position: relative; /* For pseudo-elements */
   }
   
+  /* Shrink cards when screen width is below 500px */
+@media (max-width: 500px) {
+  .game-card {
+    width: 280px; /* Slightly smaller width */
+    height: 420px; /* Slightly smaller height */
+  }
+}
+
   .game-card::before {
     content: "";
     position: absolute;

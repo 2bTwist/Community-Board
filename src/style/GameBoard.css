@@ -1,36 +1,49 @@
 .game-board {
-    text-align: center;
-    padding: 20px;
-  }
-  
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(
+    145deg,
+    #7a4f7a, /* Soft, vibrant purple */
+    #1f1420, /* Deep, dark purple */
+    #7a4f7a,  /* Soft, vibrant purple */
+    #1f1420 /* Deep, dark purple */
+  );
+  min-height: 100vh;
+  color: #f4e9d2; /* Cream color for text */
+  font-family: "Poppins", sans-serif;
+}
+
 .game-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
 }
 
 h1 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 20px;
-    text-shadow: 3px 3px rgba(0, 0, 0, 0.3);
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #f4e9d2; /* Cream color for text */
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.3);
+  font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.9rem; /* Slightly smaller on tablets */
   }
-  
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 2rem; /* Slightly smaller on tablets */
-    }
+}
+
+@media (max-width: 645px) {
+  h1 {
+    font-size: 1.1rem; /* Even smaller on mobile */
   }
-  
-  @media (max-width: 598px) {
-    h1 {
-      font-size: 1.5rem; /* Even smaller on mobile */
-    }
+}
+
+@media (max-width: 441px) {
+  h1 {
+    font-size: 0.8rem; /* Even smaller on mobile */
   }
-  @media (max-width: 375px) {
-    h1 {
-        font-size: 1rem; /* Even smaller on mobile */
-    }
-    
-  }
+}
